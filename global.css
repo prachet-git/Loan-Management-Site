@@ -1,8 +1,12 @@
 body {
-  font-family: 'Sarabun', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Host Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-body {
-  font-family: 'Taviraj', system-ui, -apple-system, BlinkMacSystemFont, serif;
+@keyframes mistMove {
+  0% {
+    transform: translate(-5%, -5%) rotate(0deg);
+  }
+  100% {
+    transform: translate(5%, 5%) rotate(2deg);
+  }
 }
-

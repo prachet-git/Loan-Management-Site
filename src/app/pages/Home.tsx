@@ -2,6 +2,8 @@ import { Link } from "react-router";
 import { Shield, TrendingUp, Users, BarChart3 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { Button } from "../components/ui/button";
+import MistBackground from "../components/ui/mistbackground";
+
 
 export default function Home() {
   const roles = [
@@ -42,37 +44,65 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="bg-white border-b">
+      <header className="bg-neutral-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">LoanFlow</h1>
-              <p className="text-gray-600 mt-1">Comprehensive Loan Management System</p>
+              <h1 className="text-5xl font-bold text-[#773ddd]">Lendstream</h1>
+              <p className="text-black">Comprehensive Loan Management System</p>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-600 to-purple-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h2 className="text-5xl font-bold mb-4">
-              Streamline Your Loan Issuance Process
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Track payments, calculate interest, and manage transaction records with ease.
-              An effortless way to manage loans for both lenders and borrowers.
-            </p>
+
+      {/* Hero Section Wrapper */}
+      <div className="bg-neutral-100 py-16">
+        <div className="mx-auto max-w-7xl px-4">
+
+          {/* Hero Card */}
+          <div className="relative overflow-hidden rounded-2xl min-h-[520px] shadow-xl">
+
+            {/* Mist Background (CLIPPED) */}
+            <MistBackground />
+
+            {/* Optional soft overlay for readability */}
+            <div className="absolute inset-0 bg-black/10 z-[1]" />
+
+            {/* Content */}
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 p-16 text-white">
+
+              {/* Left */}
+              <div>
+                
+
+                <h2 className="text-5xl sm:text-6xl lg:text-7xl leading-[1.05] sm:leading-tight lg:leading-[1.05] font-normal mb-6">
+                  Streamline Your Loan Issuance Process
+                </h2>
+
+                <p className="text-lg max-w-xl opacity-90">
+                  Track payments, calculate interest, and manage transaction records with ease.
+                  An effortless way to manage loans for both lenders and borrowers.
+                </p>
+
+                
+              </div>
+
+            
+
+            </div>
           </div>
         </div>
       </div>
 
+      
+      
+
       {/* Role Cards */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Role</h2>
-          <p className="text-gray-600">Select your dashboard to get started</p>
+          <h2 className="text-5xl font-semibold text-black mb-2">Choose Your Role</h2>
+          <p className="text-black text-lg">Select your dashboard to get started</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -101,7 +131,7 @@ export default function Home() {
       </div>
 
       {/* Features Section */}
-      <div className="bg-gray-100 py-16">
+      <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Features</h2>
