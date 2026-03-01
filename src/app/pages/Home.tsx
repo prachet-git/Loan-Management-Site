@@ -95,75 +95,103 @@ export default function Home() {
         </div>
       </div>
 
-      
-      
+      {/* Role Section */}
+      <div className="bg-gray-100 py-25 pb-12">
+        <div className="max-w-7xl mx-auto px-4">
 
-      {/* Role Cards */}
-      <div className="bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-semibold text-black mb-2">Choose Your Role</h2>
-          <p className="text-black text-lg">Select your dashboard to get started</p>
-        </div>
+          {/* Big Enclosing Box */}
+          <div className="bg-white rounded-3xl shadow-lg p-16">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {roles.map((role) => {
-            const Icon = role.icon;
-            return (
-              <Card key={role.path} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className={`w-12 h-12 rounded-lg ${role.bgColor} flex items-center justify-center mb-4`}>
-                    <Icon className={`w-6 h-6 ${role.color}`} />
+            {/* Section Header */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-normal text-gray-900 mb-4">
+                Choose Your Role
+              </h2>
+              <p className="text-gray-400 text-lg">
+                Select your dashboard to get started
+              </p>
+            </div>
+
+            {/* Roles Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {roles.map((role) => {
+                const Icon = role.icon;
+
+                return (
+                  <div
+                    key={role.path}
+                    className="group border border-gray-100 rounded-2xl p-10 hover:shadow-lg transition-all duration-300"
+                  >
+                    {/* Icon */}
+                    <div
+                      className={`w-14 h-14 rounded-xl ${role.bgColor} flex items-center justify-center mb-6`}
+                    >
+                      <Icon className={`w-7 h-7 ${role.color}`} />
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      {role.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-600 mb-8 leading-relaxed">
+                      {role.description}
+                    </p>
+
+                    {/* Button */}
+                    <Link to={role.path}>
+                      <button className="w-full py-3 bg-black text-white rounded-full hover:opacity-90 transition">
+                        Access Dashboard
+                      </button>
+                    </Link>
                   </div>
-                  <CardTitle>{role.title}</CardTitle>
-                  <CardDescription>{role.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Link to={role.path}>
-                    <Button className="w-full">
-                      Access Dashboard
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            );
-          })}
+                );
+              })}
+            </div>
+
+          </div>
         </div>
       </div>
 
       {/* Features Section */}
-      <div className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Features</h2>
+      <div className="bg-gradient-to-b from-gray-100 to-gray-200 py-20 pt-2">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Big Enclosing Box */}
+          <div className="bg-white rounded-3xl shadow-lg p-20">
+           <div className="text-center mb-15">
+             <h2 className="text-4xl md:text-5xl font-normal text-gray-900 mb-20 ">Key Features</h2>
+           </div>
+          
+
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-30">
+             <div className="text-center">
+               <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                 <TrendingUp className="w-8 h-8 text-blue-600" />
+               </div>
+               <h3 className="text-xl font-semibold mb-2">Payment Tracking</h3>
+               <p className="text-gray-600">Monitor all payments with detailed transaction history and automated reminders</p>
+             </div>
+
+             <div className="text-center">
+               <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                 <BarChart3 className="w-8 h-8 text-purple-600" />
+               </div>
+               <h3 className="text-xl font-semibold mb-2">Interest Calculation</h3>
+               <p className="text-gray-600">Automatic interest computation with customizable rates and amortization schedules</p>
+             </div>
+
+             <div className="text-center">
+               <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                 <Shield className="w-8 h-8 text-green-600" />
+               </div>
+               <h3 className="text-xl font-semibold mb-2">Risk Assessment</h3>
+               <p className="text-gray-600">Advanced analytics to evaluate creditworthiness and manage portfolio risk</p>
+             </div>
+           </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                <TrendingUp className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Payment Tracking</h3>
-              <p className="text-gray-600">Monitor all payments with detailed transaction history and automated reminders</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                <BarChart3 className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Interest Calculation</h3>
-              <p className="text-gray-600">Automatic interest computation with customizable rates and amortization schedules</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                <Shield className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Risk Assessment</h3>
-              <p className="text-gray-600">Advanced analytics to evaluate creditworthiness and manage portfolio risk</p>
-            </div>
-          </div>
-        </div>
-      </div>
+         </div>
+       </div>
 
       {/* Footer */}
       <footer className="bg-white border-t py-8">
