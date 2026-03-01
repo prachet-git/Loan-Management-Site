@@ -3,6 +3,7 @@ import { Shield, TrendingUp, Users, BarChart3 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import MistBackground from "../components/ui/mistbackground";
+import Logo from "../../assets/credaxior-logo.svg";
 
 
 export default function Home() {
@@ -48,8 +49,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-5xl font-bold text-[#773ddd]">Lendstream</h1>
-              <p className="text-black">Comprehensive Loan Management System</p>
+              <img src={Logo} alt="Credaxior Logo" className="h-15 w-auto mt-2"></img>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ export default function Home() {
 
 
       {/* Hero Section Wrapper */}
-      <div className="bg-neutral-100 py-16">
+      <div className="bg-neutral-100 py-5">
         <div className="mx-auto max-w-7xl px-4">
 
           {/* Hero Card */}
@@ -76,13 +76,13 @@ export default function Home() {
               <div>
                 
 
-                <h2 className="text-5xl sm:text-6xl lg:text-7xl leading-[1.05] sm:leading-tight lg:leading-[1.05] font-normal mb-6">
-                  Streamline Your Loan Issuance Process
+                <h2 className="text-5xl sm:text-6xl lg:text-7xl leading-[1.05] sm:leading-tight lg:leading-[1.0] font-normal mb-6">
+                  Streamline Your Loan Process
                 </h2>
 
-                <p className="text-lg max-w-xl opacity-90">
+                <p className="text-xl max-w-xl opacity-90 mt-20">
                   Track payments, calculate interest, and manage transaction records with ease.
-                  An effortless way to manage loans for both lenders and borrowers.
+                  A truly integrated platform for borrowers and lenders.
                 </p>
 
                 
@@ -168,7 +168,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-white border-t py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
-          <p>&copy; 2026 LoanFlow. All rights reserved.</p>
+          <p>&copy; 2026 Credaxior. All rights reserved.</p>
         </div>
       </footer>
     </div>
