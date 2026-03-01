@@ -55,7 +55,7 @@ export default function LenderDashboard() {
   ];
 
   return (
-    <DashboardLayout title="Lender Dashboard" roleColor="text-blue-600">
+    <DashboardLayout title="Lender Portal" roleColor="text-blue-600">
       <div className="space-y-6">
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -82,7 +82,7 @@ export default function LenderDashboard() {
         {/* Create Loan Offer */}
         <Card>
           <CardHeader>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between pb-4">
               <div>
                 <CardTitle>Loan Offers</CardTitle>
                 <CardDescription>Create and manage your loan offers</CardDescription>

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Shield, TrendingUp, Users, BarChart3 } from "lucide-react";
+import { Shield, TrendingUp, Users, BarChart3, HandCoins, Umbrella, CircleDollarSign, Calculator} from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import MistBackground from "../components/ui/mistbackground";
@@ -17,15 +17,15 @@ export default function Home() {
       bgColor: "bg-purple-100",
     },
     {
-      title: "Lender Dashboard",
+      title: "Lender Portal",
       description: "Create loan offers, track payments, and manage borrower interactions",
-      icon: TrendingUp,
+      icon: HandCoins,
       path: "/lender",
       color: "text-blue-600",
       bgColor: "bg-blue-100",
     },
     {
-      title: "Borrower Dashboard",
+      title: "Borrower Portal",
       description: "Apply for loans, track payment schedules, and manage loan details",
       icon: Users,
       path: "/borrower",
@@ -33,7 +33,7 @@ export default function Home() {
       bgColor: "bg-green-100",
     },
     {
-      title: "Financial Analyst",
+      title: "Financial Portal",
       description: "Analyze loan data, assess risks, and generate financial reports",
       icon: BarChart3,
       path: "/analyst",
@@ -118,33 +118,35 @@ export default function Home() {
                 const Icon = role.icon;
 
                 return (
-                  <div
-                    key={role.path}
-                    className="group border border-gray-100 rounded-2xl p-10 hover:shadow-lg transition-all duration-300"
-                  >
+                  <div key={role.path} className="relative group border border-gray-100 rounded-2xl p-10 bg-white overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+
+                    {/* Gradient Sweep Overlay */}
+                    <span className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-[#8516cb]/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out"/>
+
                     {/* Icon */}
                     <div
-                      className={`w-14 h-14 rounded-xl ${role.bgColor} flex items-center justify-center mb-6`}
+                      className={`relative z-10 w-14 h-14 rounded-xl ${role.bgColor} flex items-center justify-center mb-6`}
                     >
                       <Icon className={`w-7 h-7 ${role.color}`} />
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    <h3 className="relative z-10 text-xl font-semibold text-gray-900 mb-3">
                       {role.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-600 mb-8 leading-relaxed">
+                    <p className="relative z-10 text-gray-600 mb-8 leading-relaxed">
                       {role.description}
                     </p>
 
                     {/* Button */}
-                    <Link to={role.path}>
-                      <button className="w-full py-3 bg-black text-white rounded-full hover:opacity-90 transition">
+                    <Link to={role.path} className="relative z-10">
+                      <button className="w-full py-3 bg-black text-white rounded-full hover:opacity-90 transition cursor-pointer">
                         Access Dashboard
                       </button>
                     </Link>
+
                   </div>
                 );
               })}
@@ -167,7 +169,7 @@ export default function Home() {
            <div className="grid grid-cols-1 md:grid-cols-3 gap-30">
              <div className="text-center">
                <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                 <TrendingUp className="w-8 h-8 text-blue-600" />
+                 <CircleDollarSign className="w-8 h-8 text-blue-600" />
                </div>
                <h3 className="text-xl font-semibold mb-2">Payment Tracking</h3>
                <p className="text-gray-600">Monitor all payments with detailed transaction history and automated reminders</p>
@@ -175,7 +177,7 @@ export default function Home() {
 
              <div className="text-center">
                <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                 <BarChart3 className="w-8 h-8 text-purple-600" />
+                 <Calculator className="w-8 h-8 text-purple-600" />
                </div>
                <h3 className="text-xl font-semibold mb-2">Interest Calculation</h3>
                <p className="text-gray-600">Automatic interest computation with customizable rates and amortization schedules</p>
@@ -183,7 +185,7 @@ export default function Home() {
 
              <div className="text-center">
                <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                 <Shield className="w-8 h-8 text-green-600" />
+                 <Umbrella className="w-8 h-8 text-green-600" />
                </div>
                <h3 className="text-xl font-semibold mb-2">Risk Assessment</h3>
                <p className="text-gray-600">Advanced analytics to evaluate creditworthiness and manage portfolio risk</p>

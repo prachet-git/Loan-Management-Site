@@ -58,7 +58,7 @@ export default function AnalystDashboard() {
   };
 
   return (
-    <DashboardLayout title="Financial Analyst Dashboard" roleColor="text-orange-600">
+    <DashboardLayout title="Financial Portal" roleColor="text-orange-600">
       <div className="space-y-6">
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
