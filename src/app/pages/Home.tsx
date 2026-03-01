@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../co
 import { Button } from "../components/ui/button";
 import MistBackground from "../components/ui/mistbackground";
 import Logo from "../../assets/credaxior-logo.svg";
+import LogoMonochrome from "../../assets/credaxior-logo-monochrome.svg";
+
 
 
 export default function Home() {
@@ -197,8 +199,11 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-white border-t py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
-          <p>&copy; 2026 Credaxior. All rights reserved.</p>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
+          <div className="flex items-center justify-between items-center px-6">
+           <img src={LogoMonochrome} alt="Credaxior Logo Monochrome" className="h-8 w-auto opacity-75"></img>
+           <p className="flex justify-end">&copy; 2026 Credaxior. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </div>
