@@ -57,7 +57,7 @@ export default function Home() {
 
 
       {/* Hero Section Wrapper */}
-      <div className="bg-neutral-100 py-5">
+      <div className="bg-neutral-100 pt-5 pb-2">
         <div className="mx-auto max-w-7xl px-4">
 
           {/* Hero Card */}
@@ -155,7 +155,7 @@ export default function Home() {
       </div>
 
       {/* Features Section */}
-      <div className="bg-gradient-to-b from-gray-100 to-gray-200 py-20 pt-2">
+      <div className="bg-gradient-to-b from-gray-100 to-gray-200 pb-10 pt-2">
         <div className="max-w-7xl mx-auto px-4">
           {/* Big Enclosing Box */}
           <div className="bg-white rounded-3xl shadow-lg p-20">
