@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router";
 import { Home, LogOut } from "lucide-react";
 import { Button } from "./ui/button";
+import Logo from "../../assets/credaxior-logo.svg";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -19,7 +20,7 @@ export default function DashboardLayout({ children, title, roleColor }: Dashboar
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-4">
               <Link to="/" className="flex items-center space-x-2">
-                <h1 className="text-2xl font-bold text-gray-900">LoanFlow</h1>
+                <img src={Logo} alt="Credaxior Logo" className="h-6 w-auto"></img>
               </Link>
               <span className="text-gray-400">|</span>
               <h2 className={`text-lg font-semibold ${roleColor}`}>{title}</h2>
